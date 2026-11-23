@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rclone-personal — personal Google Drive backup client</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0 auto; max-width: 40rem; padding: 3rem 1.25rem 5rem;
+    background: #14161a; color: #d7dae0;
+    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  h1 { font-size: 1.5rem; letter-spacing: -0.01em; margin: 0 0 0.25rem; color: #f2f4f8; }
+  .sub { color: #8b929e; margin: 0 0 2rem; font-size: 0.9rem; }
+  h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em;
+       color: #8b929e; margin: 2rem 0 0.5rem; }
+  code { background: #1e2127; padding: 0.1em 0.35em; border-radius: 3px; font-size: 0.9em; }
+  a { color: #7aa2f7; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #23262d;
+           font-size: 0.85rem; color: #8b929e; }
+</style>
+</head>
+<body>
+
+<h1>rclone-personal</h1>
+<p class="sub">A private, single-user Google Drive OAuth client</p>
+
+<h2>What this is</h2>
+<p>
+  <code>rclone-personal</code> is a Google Cloud OAuth client belonging to one
+  person, used to run <a href="https://rclone.org">rclone</a> on their own
+  laptop. It backs up that laptop's own files to that same person's own Google
+  Drive account. It is not a product, has no users other than its owner, and is
+  not distributed or offered for sign-in to anyone else.
+</p>
+
+<h2>What it does with Google data</h2>
+<p>
+  It calls the Google Drive API to list, upload and download files inside the
+  owner's own Drive. Nothing else: no Gmail, no Calendar, no Contacts, no
+  profile data beyond the account identity needed to address the Drive.
+</p>
+<p>
+  Files are encrypted on the laptop before upload, so the Drive account stores
+  ciphertext with obfuscated filenames. Google never receives plaintext copies of
+  the backed-up files.
+</p>
+
+<h2>Data sharing</h2>
+<p>
+  None. No data obtained through the Drive API is transferred to any third
+  party, used for advertising, used to train models, or sold. See the
+  <a href="privacy.html">privacy policy</a>.
+</p>
+
+<h2>Source</h2>
+<p>
+  rclone is open source: <a href="https://github.com/rclone/rclone">github.com/rclone/rclone</a>.
+  The backup job is a small shell script driven by a systemd timer on the
+  owner's machine.
+</p>
+
+<footer>
+  Contact: <a href="mailto:itsmrlynx@gmail.com">itsmrlynx@gmail.com</a>
+  &middot; <a href="privacy.html">Privacy policy</a>
+</footer>
+
+</body>
+</html>

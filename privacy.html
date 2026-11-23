@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — rclone-personal</title>
+<style>
+  :root { color-scheme: dark; }
+  body {
+    margin: 0 auto; max-width: 40rem; padding: 3rem 1.25rem 5rem;
+    background: #14161a; color: #d7dae0;
+    font: 16px/1.65 ui-sans-serif, system-ui, -apple-system, sans-serif;
+  }
+  h1 { font-size: 1.5rem; margin: 0 0 0.25rem; color: #f2f4f8; }
+  .sub { color: #8b929e; margin: 0 0 2rem; font-size: 0.9rem; }
+  h2 { font-size: 0.95rem; color: #f2f4f8; margin: 2rem 0 0.4rem; }
+  a { color: #7aa2f7; }
+  ul { padding-left: 1.2rem; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #23262d;
+           font-size: 0.85rem; color: #8b929e; }
+</style>
+</head>
+<body>
+
+<h1>Privacy policy</h1>
+<p class="sub">rclone-personal OAuth client &middot; last updated 23 November 2026</p>
+
+<h2>Who this covers</h2>
+<p>
+  <code>rclone-personal</code> is a single-user OAuth client created by one
+  individual for their own laptop. The only Google Account that can authorise it
+  is the owner's. There are no other users, so there is no third-party data to
+  protect and no data collected about anyone else.
+</p>
+
+<h2>What Google user data is accessed</h2>
+<ul>
+  <li>Files and folders in the owner's own Google Drive, via the Drive API
+      (scope <code>drive</code>), in order to read and write backups.</li>
+  <li>The Google Account's email address, used only to identify which Drive to
+      address.</li>
+  <li>Nothing else. No Gmail, Calendar, Contacts, Photos, or location data.</li>
+</ul>
+
+<h2>How the data is used</h2>
+<p>
+  Exclusively to copy files from the owner's laptop to the owner's Drive and to
+  restore them on request. No analysis, no profiling, no aggregation.
+</p>
+
+<h2>Storage and encryption</h2>
+<p>
+  Files are encrypted on the laptop with a key that never leaves the laptop and
+  is never sent to Google. Uploaded objects therefore appear in Drive as
+  ciphertext under obfuscated filenames. Where files are overwritten or deleted
+  locally, a previous copy may be retained on Drive in a dated archive folder so
+  that an accidental deletion can be undone.
+</p>
+
+<h2>Sharing and third parties</h2>
+<p>
+  Data obtained through the Drive API is not transferred to, shared with, or
+  sold to any third party, is not used for advertising, and is not used to
+  develop, improve or train machine learning or AI models. The only parties
+  involved are the owner and Google, as the storage provider.
+</p>
+
+<h2>Retention and deletion</h2>
+<p>
+  Backups remain in the owner's Drive until the owner deletes them. Deleting a
+  file in Drive removes it; revoking the client's access in the Google Account
+  permissions page ends all API access immediately. Archived versions are kept
+  only so that accidental local deletions are recoverable.
+</p>
+
+<h2>Limited Use disclosure</h2>
+<p>
+  This client's use of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API
+  Services User Data Policy</a>, including the Limited Use requirements.
+</p>
+
+<h2>Changes</h2>
+<p>
+  If this policy changes, the revised version will be published at this URL with
+  a new date above.
+</p>
+
+<footer>
+  Contact: <a href="mailto:itsmrlynx@gmail.com">itsmrlynx@gmail.com</a>
+  &middot; <a href="index.html">Back to overview</a>
+</footer>
+
+</body>
+</html>
